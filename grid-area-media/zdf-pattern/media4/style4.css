@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: rgb(196, 192, 192);
+}
+nav,ul,li,a {
+    text-decoration: none;
+    list-style-type: none;
+    color: greenyellow;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    font-size: 25px;
+    font-family: monospace;
+}
+nav ul li a:hover, #click1,#click2,#click3,#click4 {
+    background-color: tomato;
+    background-color: silver;
+
+}
+nav ul li a:active {
+    color: red;
+    background-color: rosybrown;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(196, 128, 3);
+    padding: 0;
+    box-shadow: 1px 1px 4px 4px rgb(128, 122, 122);
+    grid-area: nav;
+}
+header {
+    text-align: center;
+}
+img {
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 4px rgb(128, 122, 122);
+}
+ul {
+    margin: 0;
+}
+h1 {
+    display: block;
+    margin: 5px;
+    font-family: monospace;
+    color: black;
+    text-align: center;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-areas:
+    "sidebar main main main"
+    "sidebar content content gallery"
+    "sidebar footer footer footer";
+}
+div { margin:5px ;
+}
+p {
+    font-size: xx-large;
+}
+p:hover {
+    background-color: rosybrown;
+    color: white;
+}
+main,.sidebar,.content,.gallery,.footer {
+    border:1px solid black ;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+main {
+    grid-area: main;
+    
+}
+.sidebar {
+    grid-area: sidebar;
+    
+}
+.content {
+    grid-area: content;
+    display: flex;
+    overflow-y: scroll;
+    
+}
+.gallery {
+    grid-area: gallery;
+    
+}
+.footer {
+    grid-area: footer;
+    border:1px solid black ;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr .5fr;
+        grid-template-areas: 
+        'sidebar'
+        'main'
+        'content'
+        'gallery'
+        'footer'
+        ;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'sidebar'
+        'main'
+        'content'
+        'gallery'
+        'footer'
+        ;
+    }
+    .sidebar {
+        display: inline-block;
+
+    }
+    
+}

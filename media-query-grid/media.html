@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="media1.css">
+</head>
+<body>
+    <header>Header</header>
+    <section>
+        <aside>Side Menu</aside>
+        <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo nulla placeat accusantium, iusto distinctio? Tempore alias error officiis inventore. Voluptas quia dicta illum corporis, nesciunt aperiam consequuntur quas voluptatem?
+        Eveniet iste delectus eum ea officia, corporis esse porro fuga commodi quidem voluptates pariatur itaque non, doloribus alias facere minima repellendus unde voluptatem blanditiis cum sapiente molestias assumenda eius? Magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nihil ducimus vel perspiciatis, tempore ut et consequuntur, voluptate quo aliquid, laborum dolore incidunt accusamus eveniet iusto commodi voluptatum corrupti odio.</main>
+        <aside>Ads</aside>
+    </section>
+
+    <hr>
+    <h1>Fluid Images</h1>
+    <picture>
+        <source media="(max-width: 500px)" srcset="./lagoon.jpg">
+        <source media="(max-width: 750px)" srcset="./plane.jpg">
+        <img src="./tunnel.jpeg">
+    </picture>
+    <hr>
+    <article class="col-s-1"><!-- <img src="./plane.jpg" alt=""> --></article>
+    <article class="col-s-2"><!-- <img src="./plane.jpg" alt=""> --></article>
+
+    <article class="col-s-3"><!-- <img src="./lagoon.jpg" alt=""> --></article>
+    <article class="col-m-6"><!-- <img src="./tunnel.jpeg" alt=""> -->
+        <div class="col-s-1"></div>
+        <div class="col-m-5"><img src="./lagoon.jpg" alt=""><p style="color:white">Lorem ipsum dolor sit amet.</p></div>
+        <div></div>
+    </article>
+</body>
+</html>

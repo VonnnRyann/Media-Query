@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "sidebar content content gallery"
+    "sidebar footer footer gallery"
+    "article article article article";
+
+}
+nav {
+    grid-area: nav;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+main {
+    grid-area: main;
+    background-color: rgb(185, 93, 93);
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(105, 23, 23);
+}
+.content {
+    grid-area: content;
+    background-color: rgb(124, 61, 61);
+}
+.gallery {
+    grid-area: gallery;
+    background-color: rgb(88, 51, 51);
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(83, 60, 60);
+    border-radius: 10px;
+}
+.article {
+    grid-area: article;
+    background-color: rgb(114, 105, 86);
+    border-radius: 10px;
+}
+@media only screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5px 1fr 2fr 2fr 1fr .5fr 2fr;
+        grid-template-areas: 
+        'nav'
+        'sidebar'
+        'main'
+        'content'
+        'gallery'
+        'footer'
+        'article'
+        ;
+    }
+    
+}
+header {
+    height: 100px;
+}
+img {
+    height: 50%;
+    width: 100%;
+}
+p {
+    display: inline-block;
+    color: whitesmoke;
+    font-weight: bolder;
+
+}
+p:hover {
+    color: tomato;
+    border-radius: 5px ;
+    background-color: gray;
+}
+div {
+    text-align: center;
+}
